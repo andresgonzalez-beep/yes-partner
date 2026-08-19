@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YES Ministries — Asóciate con Nosotros</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;color:#2B2620;background:#F7F2E8;-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.6}
+.hero{background:#1C1208;color:#F5EDD8;padding:5rem 2rem 4rem;text-align:center}
+.hero-label{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#C77B3A;margin-bottom:1rem}
+.hero h1{font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(24px,4vw,40px);line-height:1.3;color:#F5EDD8;max-width:640px;margin:0 auto 1.25rem}
+.hero p{font-size:15px;color:#C8B99A;max-width:500px;margin:0 auto 0.75rem;line-height:1.8}
+.hero-quote{font-family:Georgia,serif;font-style:italic;font-size:17px;color:#F5EDD8;border-left:2px solid #C77B3A;padding:0.75rem 1.25rem;margin:1.5rem auto;max-width:500px;text-align:left;line-height:1.7}
+.cta-row{display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:1.75rem}
+.btn-p{background:#B5651D;color:#fff;border:none;padding:13px 28px;border-radius:50px;font-size:15px;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block}
+.btn-o{background:transparent;color:#F5EDD8;border:1px solid #C77B3A;padding:13px 28px;border-radius:50px;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);background:#fff;border-bottom:1px solid #E8DFC8}
+.stat{padding:1.5rem 1rem;text-align:center;border-right:1px solid #E8DFC8}
+.stat:last-child{border-right:none}
+.stat-n{font-family:Georgia,serif;font-size:28px;color:#B5651D;line-height:1;margin-bottom:4px}
+.stat-l{font-size:11px;color:#8A8275;text-transform:uppercase;letter-spacing:1px}
+.bridge{background:#fff;border-top:3px solid #B5651D;padding:3.5rem 2rem;text-align:center}
+.bridge h2{font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(20px,3.5vw,30px);line-height:1.45;color:#1C1208;margin-bottom:1rem}
+.bridge h2 span{color:#B5651D}
+.bridge-verse{font-family:Georgia,serif;font-style:italic;font-size:14px;color:#8A8275;line-height:1.7;max-width:500px;margin:0 auto}
+.wrap{max-width:820px;margin:0 auto;padding:4rem 2rem}
+.sec-label{font-size:11px;letter-spacing:2.5px;text-transform:uppercase;color:#B5651D;margin-bottom:0.6rem;display:flex;align-items:center;gap:10px}
+.sec-label::after{content:'';flex:1;height:1px;background:#E8DFC8}
+h2{font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(20px,3vw,28px);line-height:1.3;margin-bottom:1rem;color:#1C1208}
+p{color:#7A6A55;font-size:15px;line-height:1.8;margin-bottom:1rem}
+.story-box{background:#fff;border-left:3px solid #B5651D;border-radius:0 12px 12px 0;padding:1.25rem 1.75rem;margin:1.25rem 0;font-family:Georgia,serif;font-style:italic;font-size:16px;line-height:1.8;color:#1C1208}
+.divider{border:none;border-top:1px solid #E8DFC8;margin:0}
+.uvp-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:1.25rem}
+@media(max-width:600px){.uvp-grid,.model-grid,.work-grid,.projects,.stats{grid-template-columns:1fr}}
+.uvp-card{border:1px solid #E8DFC8;border-radius:14px;padding:1.5rem 1.6rem;background:#fff}
+.uvp-card.dark{background:#1C1208;border-color:#1C1208}
+.uvp-num{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:#B5651D;margin-bottom:0.5rem}
+.uvp-card.dark .uvp-num{color:#C77B3A}
+.uvp-headline{font-family:Georgia,serif;font-style:italic;font-size:17px;color:#1C1208;margin-bottom:0.65rem;line-height:1.35;font-weight:400}
+.uvp-card.dark .uvp-headline{color:#F5EDD8}
+.uvp-desc{font-size:13.5px;color:#7A6A55;line-height:1.75}
+.uvp-card.dark .uvp-desc{color:#C8B99A}
+.model-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:1.25rem}
+.model-card{background:#fff;border:1px solid #E8DFC8;border-radius:12px;padding:1.25rem 1.5rem}
+.model-card.hl{border:2px solid #B5651D;background:#fdf8f2}
+.mc-label{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:#B0A08A;margin-bottom:0.4rem}
+.model-card.hl .mc-label{color:#B5651D}
+.model-card h3{font-size:15px;font-weight:600;margin-bottom:0.5rem;color:#1C1208}
+.model-card p{font-size:13.5px;color:#7A6A55;margin:0;line-height:1.65}
+.compare-wrap{overflow-x:auto;margin-top:1.25rem}
+.compare-table{width:100%;border-collapse:collapse;border:1px solid #E8DFC8;border-radius:12px;overflow:hidden;min-width:460px}
+.compare-table th{padding:0.85rem 1rem;font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:1px}
+.compare-table th:first-child{background:#F7F2E8;color:#8A8275;text-align:left}
+.compare-table th.us{background:#f5f0e8;color:#7A5A30;text-align:center}
+.compare-table th.yc{background:#1C1208;color:#C77B3A;text-align:center}
+.compare-table td{padding:0.85rem 1rem;border-top:1px solid #E8DFC8;font-size:13.5px;vertical-align:top}
+.compare-table td:first-child{background:#F7F2E8;font-weight:500;color:#2B2620}
+.compare-table td.us{background:#faf7f0;color:#7A6A55;text-align:center;line-height:1.5}
+.compare-table td.yc{background:#f0f7ee;color:#2B5A1F;text-align:center;line-height:1.5;font-weight:500}
+.bad{color:#A32D2D;font-weight:600;display:block}
+.good{color:#2B5A1F;font-weight:600;display:block}
+.sub{font-size:11px;color:#B0A08A;display:block;margin-top:3px}
+.kingdom-sec{background:#1C1208;padding:4rem 2rem}
+.kingdom-sec .wrap{padding:0}
+.kingdom-quote{font-family:Georgia,serif;font-style:italic;font-size:clamp(17px,2.5vw,22px);color:#F5EDD8;line-height:1.75;text-align:center;margin-bottom:2rem}
+.kingdom-quote span{color:#C77B3A}
+.work-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.work-card{background:rgba(255,255,255,0.07);border:0.5px solid rgba(255,255,255,0.12);border-radius:12px;padding:1.1rem 1.25rem}
+.work-title{font-size:14px;font-weight:600;margin-bottom:0.4rem;color:#F5EDD8}
+.work-desc{font-size:13px;color:#C8B99A;line-height:1.7}
+.projects{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:1.25rem}
+.proj-card{border-radius:14px;padding:1.5rem}
+.proj-card.p1{background:#1C1208}
+.proj-card.p2{background:#fff;border:1px solid #E8DFC8}
+.proj-num{font-size:10px;text-transform:uppercase;letter-spacing:2px;color:#C77B3A;margin-bottom:0.5rem}
+.proj-card.p2 .proj-num{color:#B5651D}
+.proj-title{font-family:Georgia,serif;font-style:italic;font-size:18px;color:#F5EDD8;margin-bottom:0.6rem;line-height:1.3}
+.proj-card.p2 .proj-title{color:#1C1208}
+.proj-desc{font-size:13.5px;color:#C8B99A;line-height:1.75}
+.proj-card.p2 .proj-desc{color:#7A6A55}
+.proj-verse{font-family:Georgia,serif;font-style:italic;font-size:13px;color:#C77B3A;margin-top:1rem}
+.proj-card.p2 .proj-verse{color:#B5651D}
+.dark-sec{background:#1C1208;padding:4rem 2rem}
+.dark-sec .wrap{padding:0}
+.dark-sec h2{color:#F5EDD8}
+.dark-sec p{color:#C8B99A}
+.dark-sec .sec-label{color:#C77B3A}
+.dark-sec .sec-label::after{background:rgba(255,255,255,0.12)}
+.dark-sec .story-box{background:rgba(255,255,255,0.07);border-left-color:#C77B3A;color:#F5EDD8}
+.trust-row{display:flex;gap:8px;flex-wrap:wrap;margin-top:1.25rem}
+.pill{background:#F7F2E8;border:1px solid #E8DFC8;border-radius:50px;padding:6px 14px;font-size:12.5px;color:#7A6A55}
+.final{background:#B5651D;padding:5rem 2rem;text-align:center}
+.final h2{font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:clamp(22px,3.5vw,34px);color:#fff;margin-bottom:0.75rem;line-height:1.3}
+.final p{font-size:15px;color:rgba(255,255,255,0.85);max-width:480px;margin:0 auto 2rem;line-height:1.8}
+.btn-w{background:#fff;color:#B5651D;border:none;padding:13px 28px;border-radius:50px;font-size:15px;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block;margin:0 6px 8px}
+.btn-g{background:transparent;color:#fff;border:1px solid rgba(255,255,255,0.5);padding:13px 28px;border-radius:50px;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block;margin:0 6px 8px}
+.final-verse{font-family:Georgia,serif;font-style:italic;font-size:13.5px;color:rgba(255,255,255,0.6);margin-top:1.75rem}
+footer{background:#1C1208;color:#8A8275;padding:1.5rem 2rem;text-align:center;font-size:12.5px}
+footer a{color:#C77B3A;text-decoration:none}
+</style>
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-label">Una invitacion de Andres, Presidente de YES Ministries</div>
+  <h1>Detras de cada misionero hay una historia que nadie ve. Hasta ahora.</h1>
+  <p>He estado en comunidades donde el pastor, la persona en quien todo el pueblo confia, llega a casa por la noche a un techo con goteras, a una mesa con apenas suficiente. He visto pastores cortando hierba con un machete y recogiendo pinas en el campo para alimentar a sus familias.</p>
+  <div class="hero-quote">"Su llamado es claro. Su fidelidad es extraordinaria. Lo que cargan, nadie deberia cargarlo solo."</div>
+  <p>Son las manos y los pies de Jesus en los lugares mas olvidados del mundo, alcanzando personas que ningun extranjero jamas podria alcanzar. Y lo hacen con casi ningun apoyo, ninguna estructura, y ninguna red de seguridad para ellos ni para sus familias.</p>
+  <div class="cta-row">
+    <a class="btn-p" href="mailto:info@yeservants.org">Asociate con YES</a>
+    <a class="btn-o" href="https://yeservants.org">Conoce mas</a>
+  </div>
+</section>
+
+<div class="stats">
+  <div class="stat"><div class="stat-n">35+</div><div class="stat-l">Anos en el campo</div></div>
+  <div class="stat"><div class="stat-n">20+</div><div class="stat-l">Naciones alcanzadas</div></div>
+  <div class="stat"><div class="stat-n">Platino</div><div class="stat-l">Calificacion Candid</div></div>
+  <div class="stat"><div class="stat-n">501(c)(3)</div><div class="stat-l">EIN 54-1558343</div></div>
+</div>
+
+<div class="bridge">
+  <h2>La inversion de mayor retorno que jamas haras<br>no esta en Wall Street.<br>Esta <span>en el campo.</span> Y dura para siempre.</h2>
+  <p class="bridge-verse">"No acumuleis para vosotros tesoros en la tierra, donde la polilla y el oxido destruyen. Sino acumulad para vosotros tesoros en el cielo, donde ni la polilla ni el oxido destruyen." Mateo 6:19-20</p>
+</div>
+
+<div class="wrap">
+  <div class="sec-label">Lo que hace diferente a YES</div>
+  <h2>Cuatro cosas que nadie mas esta haciendo.</h2>
+  <div class="uvp-grid">
+    <div class="uvp-card dark">
+      <div class="uvp-num">01</div>
+      <div class="uvp-headline">Encontramos a los trabajadores fieles que todos los demas olvidaron buscar.</div>
+      <div class="uvp-desc">Los grandes concilios solo apoyan a los suyos. Ninguna organizacion misionera esta buscando al pastor que ya esta insertado en su comunidad, ya confiable, ya dando fruto, y cargando todo solo. Nosotros si.</div>
+    </div>
+    <div class="uvp-card">
+      <div class="uvp-num">02</div>
+      <div class="uvp-headline">Un solo Cuerpo. Una sola mision. Nos reconocemos no por nuestro concilio, sino por el Espiritu que compartimos.</div>
+      <div class="uvp-desc">Jesus oro para que fueramos uno, y dijo que nuestra unidad seria lo que haria creer al mundo que lo observa. No preguntamos a que concilio perteneces. Preguntamos una sola cosa: eres fiel y estas alli.</div>
+    </div>
+    <div class="uvp-card">
+      <div class="uvp-num">03</div>
+      <div class="uvp-headline">Formamos a las personas que construyen iglesias.</div>
+      <div class="uvp-desc">Una congregacion puede reunirse en cualquier lugar. Lo que no puede sobrevivir sin es un pastor que este estable, apoyado y libre para liderar. Hemos visto congregaciones caer no porque les faltara un edificio, sino porque su pastor cargaba demasiado solo. Empezamos ahi.</div>
+    </div>
+    <div class="uvp-card dark">
+      <div class="uvp-num">04</div>
+      <div class="uvp-headline">Vamos al campo. Nos quedamos con los trabajadores. Esa es la diferencia.</div>
+      <div class="uvp-desc">Cada ano llegan miles de viajes misioneros, construyen algo y se van. El pastor se queda. La necesidad se queda. YES camina junto a estos trabajadores con apoyo financiero, acompanamiento pastoral y educacion continua, y los mantiene conectados al Cuerpo de Cristo. No por una temporada. Por el tiempo que sea necesario.</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="wrap">
+  <div class="sec-label">El modelo</div>
+  <h2>Por que este es el camino mas directo hacia un impacto duradero.</h2>
+  <p>Ya hay un pastor en ese pueblo. Ya habla el idioma. Ya se ha ganado la confianza de la comunidad. La pregunta nunca fue si alguien debia ir. Fue si notamos a quien ya estaba alli.</p>
+  <div class="compare-wrap">
+    <table class="compare-table">
+      <thead>
+        <tr><th>Factor</th><th class="us">Misionero enviado desde EEUU</th><th class="yc">Modelo YES</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Idioma</td><td class="us"><span class="bad">Anos de entrenamiento</span><span class="sub">antes de que el ministerio comience</span></td><td class="yc"><span class="good">Ya habla el idioma</span><span class="sub">El ministerio empieza el primer dia</span></td></tr>
+        <tr><td>Confianza de la comunidad</td><td class="us"><span class="bad">Construida desde cero</span><span class="sub">toma anos</span></td><td class="yc"><span class="good">Ya ganada</span><span class="sub">anos de relaciones establecidas</span></td></tr>
+        <tr><td>Acceso al campo</td><td class="us"><span class="bad">Depende de la visa</span><span class="sub">puede ser revocada</span></td><td class="yc"><span class="good">Ciudadano permanente</span><span class="sub">nadie puede enviarlo de vuelta</span></td></tr>
+        <tr><td>Tiempo hasta el impacto</td><td class="us"><span class="bad">Anos de preparacion</span><span class="sub">entrenamiento y adaptacion</span></td><td class="yc"><span class="good">Inmediato</span><span class="sub">el apoyo comienza de inmediato</span></td></tr>
+        <tr><td>Permanencia</td><td class="us"><span class="bad">Temporal</span><span class="sub">la asignacion eventualmente termina</span></td><td class="yc"><span class="good">Permanente</span><span class="sub">este es su hogar</span></td></tr>
+        <tr><td>Eficiencia de costo</td><td class="us"><span class="bad">Significativamente mayor</span><span class="sub">costo total</span></td><td class="yc"><span class="good">Una fraccion de eso</span><span class="sub">calibrado al campo</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="kingdom-sec">
+  <div class="wrap">
+    <div class="sec-label" style="color:#C77B3A">A donde va tu apoyo</div>
+    <h2 style="color:#F5EDD8">Dios hace la conexion. Nosotros nos quedamos.</h2>
+    <div class="kingdom-quote">
+      "Tu te asocias con YES.<br>YES se asocia con los trabajadores.<br>Los conocemos por nombre,<br><span>sus campos, sus familias, su fidelidad.</span><br>Asi es como se mueve el Reino."
+    </div>
+    <div class="work-grid">
+      <div class="work-card"><div class="work-title">Sosteniendo a trabajadores fieles</div><div class="work-desc">Apoyando a misioneros y sus familias para que puedan enfocarse completamente en la mision, no en sobrevivir.</div></div>
+      <div class="work-card"><div class="work-title">Restaurando hogares y lugares de reunion</div><div class="work-desc">Un pastor que vive con dignidad lidera con todo su ser. Una congregacion con un lugar para reunirse se convierte en la Iglesia.</div></div>
+      <div class="work-card"><div class="work-title">Enviando equipos misioneros</div><div class="work-desc">Iglesias, escuelas y empresas que quieren invertir en la mision global con impacto real, no turismo espiritual.</div></div>
+      <div class="work-card"><div class="work-title">Proyectos evangelisticos en el campo</div><div class="work-desc">Trabajo identificado por los trabajadores locales que conocen el campo, que abre puertas y deja conexiones duraderas con la iglesia local.</div></div>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="sec-label">Proyectos especiales</div>
+  <h2>Mas alla del apoyo continuo, siempre hay trabajo por hacer.</h2>
+  <p>El modelo biblico no requiere un edificio. La gente se reune donde sea que haya fe. Pero el pastor que sirve a esa congregacion necesita un lugar donde vivir con dignidad. Cuando el este estable, la congregacion crece. Y entonces pensamos en el edificio.</p>
+  <div class="projects">
+    <div class="proj-card p1">
+      <div class="proj-num">Prioridad 01</div>
+      <div class="proj-title">El hogar del pastor.</div>
+      <div class="proj-desc">Hemos visto pastores viviendo en condiciones que nadie deberia aceptar. Un techo con goteras. Paredes que dejan entrar la lluvia. Restaurar el hogar de un pastor cambia la realidad de su familia para siempre, y lo libera para liderar con todo su ser, no solo con lo que queda despues de sobrevivir.</div>
+      <div class="proj-verse">"El trabajador merece su salario." Lucas 10:7</div>
+    </div>
+    <div class="proj-card p2">
+      <div class="proj-num">Prioridad 02</div>
+      <div class="proj-title">El lugar de reunion de la congregacion.</div>
+      <div class="proj-desc">Una vez que el pastor y su familia esten estables, la congregacion puede crecer. Una congregacion en crecimiento necesita un lugar para reunirse. Cambiar un techo. Reparar paredes. Construir un espacio donde una comunidad pueda reunirse semana tras semana y convertirse en la Iglesia.</div>
+      <div class="proj-verse">"Cuan hermosos son los pies de los que anuncian buenas nuevas." Romanos 10:15</div>
+    </div>
+  </div>
+</div>
+
+<div class="divider"></div>
+
+<div class="dark-sec">
+  <div class="wrap">
+    <div class="sec-label">El Cuerpo de Cristo</div>
+    <h2>Esto no es caridad. Es el Cuerpo funcionando como uno.</h2>
+    <p>La Iglesia nunca fue pensada como un edificio. Es un pueblo, cada parte indispensable para el conjunto. Y el misionero en el campo? Es el alcance del cuerpo hacia el mundo, las manos y los pies de Jesus, yendo donde el resto de nosotros no puede. Cuando los dejamos sin apoyo, somos un cuerpo que ha abandonado sus propios miembros.</p>
+    <div class="story-box">"Si un miembro padece, todos los miembros se duelen con el; y si un miembro recibe honra, todos los miembros con el se gozan. Vosotros, pues, sois el cuerpo de Cristo, y miembros cada uno en particular." 1 Corintios 12:26-27</div>
+    <div class="story-box">"Dad, y se os dara; medida buena, apretada, remecida y rebosando daran en vuestro regazo." Lucas 6:38</div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="sec-label">Por que confiar en YES</div>
+  <h2>35 anos. Calificacion Platino. Fundado por misioneros, para misioneros.</h2>
+  <p>YES ha operado desde 1990, fundado por personas que habian estado en el campo y entendian por experiencia lo que les faltaba a los trabajadores fieles. No llegamos en paracaidas. Construimos relaciones, nos quedamos a largo plazo, y estructuramos todo para que los lideres locales sean empoderados, no dependientes.</p>
+  <div class="trust-row">
+    <div class="pill">Calificacion Platino en Candid</div>
+    <div class="pill">501(c)(3) EIN 54-1558343</div>
+    <div class="pill">Operando desde 1990</div>
+    <div class="pill">Fundado por misioneros de campo</div>
+    <div class="pill">20+ naciones activas hoy</div>
+  </div>
+</div>
+
+<section class="final">
+  <h2>Las manos y los pies necesitan al Cuerpo entero.<br>Seras ese apoyo?</h2>
+  <p>Tu asociacion es lo que permite que un misionero deje de sobrevivir y empiece a prosperar. Dame unos minutos. Te mostrare un rostro real, un lugar real, y exactamente a donde va tu apoyo.</p>
+  <div>
+    <a class="btn-w" href="mailto:info@yeservants.org">Habla con Andres</a>
+    <a class="btn-g" href="https://yeservants.org">Conoce la historia completa</a>
+  </div>
+  <p class="final-verse">"En esto conoceran todos que sois mis discipulos, si tuviereis amor los unos con los otros." Juan 13:35</p>
+</section>
+
+<footer>
+  YES — Yielded Evangelical Servants &nbsp;·&nbsp;
+  <a href="https://yeservants.org">yeservants.org</a> &nbsp;·&nbsp;
+  <a href="mailto:info@yeservants.org">info@yeservants.org</a> &nbsp;·&nbsp;
+  501(c)(3) EIN 54-1558343 &nbsp;·&nbsp; Orlando, FL
+</footer>
+
+</body>
+</html>
